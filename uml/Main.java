@@ -7,10 +7,7 @@ public class Main {
     public static void main(String args[]) throws Exception{
         Scanner input = new Scanner(System.in);
         boolean loop = true;
-        Transacao transacao = new Transacao();
         Acervo acervo = new Acervo();
-        Emprestimo emprestimo = new Emprestimo();
-        Devolucao devolucao = new Devolucao();
       
         while (loop) {
           printInicio();
