@@ -15,6 +15,7 @@ public class Emprestimo extends Transacao {
           c.add(Calendar.DATE, 7);
           prazoEmprestimo = c.getTime();
           super.dataEmprestimo = prazoEmprestimo;
+          System.out.println("Livro emprestado com sucesso.");
         }
     };
 
@@ -25,6 +26,7 @@ public class Emprestimo extends Transacao {
           c.add(Calendar.DATE, 7);
           prazoEmprestimo = c.getTime();
           super.dataEmprestimo = prazoEmprestimo;
+          System.out.println("Emprestimo renovado com sucesso.");
         }
     };
   

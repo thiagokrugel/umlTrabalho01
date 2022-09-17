@@ -21,6 +21,7 @@ public class Pessoa {
         if (p == null) {
           Pessoa pessoa = new Pessoa(nome, sobrenome, cpf);
           pessoas.add(pessoa);
+          System.out.println("Pessoa adicionada.");
         }
         else {
           System.out.println("CPF já cadastrado.");
@@ -31,6 +32,7 @@ public class Pessoa {
         Pessoa p = consultarPessoa(cpf);
         if (p != null) {
           pessoas.remove(p);
+          System.out.println("Pessoa removida.");
         }
         else {
           System.out.println("CPF não encontrado.");
@@ -51,6 +53,7 @@ public class Pessoa {
         if (p != null) {
           p.nome = nomeNovo;
           p.sobrenome = sobrenomeNovo;
+          System.out.println("Pessoa atualizada.");
         }
         else {
           System.out.println("CPF não localizado.");

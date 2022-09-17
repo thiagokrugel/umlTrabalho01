@@ -15,8 +15,12 @@ public class Relacionamento {
     boolean resultado = consultar(cpf, idPapel);
     if (!resultado) {
       switch (idPapel) {
-        case 0: estudante.incluirEstudante(primeiroNome, sobrenome, cpf); break;
-        case 1: atendente.incluirAtendente(primeiroNome, sobrenome, cpf); break;
+        case 0: estudante.incluirEstudante(primeiroNome, sobrenome, cpf); 
+                pessoa.incluirPessoa(primeiroNome, sobrenome, cpf);
+                break;
+        case 1: atendente.incluirAtendente(primeiroNome, sobrenome, cpf);
+                pessoa.incluirPessoa(primeiroNome, sobrenome, cpf);
+                break;
         case 2: pessoa.incluirPessoa(primeiroNome, sobrenome, cpf); break;
         default: System.out.printf("Selecione uma opção válida."); break;
       }
@@ -30,8 +34,12 @@ public class Relacionamento {
     boolean resultado = consultar(cpf, idPapel);
     if (resultado) {
       switch (idPapel) {
-        case 0: estudante.excluirEstudante(cpf); break;
-        case 1: atendente.excluirAtendente(cpf); break;
+        case 0: estudante.excluirEstudante(cpf); 
+                pessoa.excluirPessoa(cpf);
+                break;
+        case 1: atendente.excluirAtendente(cpf);
+                pessoa.excluirPessoa(cpf);
+                break;
         case 2: pessoa.excluirPessoa(cpf); break;
         default: System.out.printf("Selecione uma opção válida.\n"); break;
       }
@@ -50,6 +58,7 @@ public class Relacionamento {
           return true;
         }
         else
+          System.out.println("Estudante não localizado.");
           return false;
       case 1:
         Atendente a = atendente.consultarAtendente(cpf);
@@ -58,6 +67,7 @@ public class Relacionamento {
           return true;
         }
         else
+        System.out.println("Atendente não localizado.");
           return false;
       case 2:
         Pessoa p = pessoa.consultarPessoa(cpf);
@@ -66,6 +76,7 @@ public class Relacionamento {
           return true;
         }
         else          
+        System.out.println("Pessoa não localizada.");
           return false;
     }
     return false;
@@ -75,8 +86,12 @@ public class Relacionamento {
     boolean resultado = consultar(cpf, idPapel);
     if (resultado) {
       switch (idPapel){
-        case 0: estudante.atualizarEstudante(cpf, novoNome, novoSobrenome); break;
-        case 1: atendente.atualizarAtendente(cpf, novoNome, novoSobrenome); break;
+        case 0: estudante.atualizarEstudante(cpf, novoNome, novoSobrenome); 
+                pessoa.atualizarPessoa(cpf, novoNome, novoSobrenome);
+                break;
+        case 1: atendente.atualizarAtendente(cpf, novoNome, novoSobrenome);
+                pessoa.atualizarPessoa(cpf, novoNome, novoSobrenome);
+                break;
         case 2: pessoa.atualizarPessoa(cpf, novoNome, novoSobrenome); break;
         default: System.out.printf("Selecione uma opção válida.\n"); break;
       } 

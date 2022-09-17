@@ -18,6 +18,7 @@ public class Estudante extends Papel {
         if (e == null) {
           Estudante estudante = new Estudante(primeiroNome, sobrenome, cpf);
           super.estudantes.add(estudante);
+          System.out.println("Estudante adicionado.");
         }
         else {
           System.out.println("CPF já cadastrado.");
@@ -28,6 +29,7 @@ public class Estudante extends Papel {
         Estudante e = consultarEstudante(cpf);
         if (e != null) {
           super.estudantes.remove(e);
+          System.out.println("Estudante removido.");
         }
         else {
           System.out.println("CPF não encontrado.");
@@ -48,6 +50,7 @@ public class Estudante extends Papel {
         if (e != null) {
           e.nome = nomeNovo;
           e.sobrenome = sobrenomeNovo;
+          System.out.println("Estudante atualizado.");
         }
         else {
           System.out.println("CPF não localizado.");

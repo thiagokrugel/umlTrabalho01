@@ -10,6 +10,7 @@ public class Acervo {
         if (l == null) {
           Livro livro = new Livro(id, titulo);
           Livros.add(livro);
+          System.out.println("Livro adicionado.");
         }
         else {
           System.out.println("Há um livro no id especificado.");
@@ -20,6 +21,7 @@ public class Acervo {
         Livro l = consultarLivro(id);
         if (l != null) {
           Livros.remove(l);
+          System.out.println("Livro removido.");
         }
         else {
           System.out.println("Não há livro com o id indicado.");
@@ -40,6 +42,7 @@ public class Acervo {
         Livro l = consultarLivro(id);
         if (l != null) {
           l.titulo = tituloNovo;
+          System.out.println("Livro atualizado.");
         }
         else {
           System.out.println("Não há livro com o id indicado.");

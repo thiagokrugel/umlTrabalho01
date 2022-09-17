@@ -18,6 +18,7 @@ public class Atendente extends Papel {
         if (a == null) {
           Atendente atendente = new Atendente(primeiroNome, sobrenome, cpf);
           super.atendentes.add(atendente);
+          System.out.println("Atendente adicionado.");
         }
         else {
           System.out.println("CPF já cadastrado.");
@@ -28,6 +29,7 @@ public class Atendente extends Papel {
         Atendente a = consultarAtendente(cpf);
         if (a != null) {
           super.atendentes.remove(a);
+          System.out.println("Atendente removido.");
         }
         else {
           System.out.println("CPF não encontrado.");
@@ -48,6 +50,7 @@ public class Atendente extends Papel {
         if (a != null) {
           a.nome = nomeNovo;
           a.sobrenome = sobrenomeNovo;
+          System.out.println("Atendente atualizado.");
         }
         else {
           System.out.println("CPF não localizado.");

@@ -4,6 +4,7 @@ public class Reserva extends Transacao {
     public void solicitarReserva(Livro livro){
         if (livro.estado != "reservado") {
           livro.estado = "reservado";
+          System.out.println("Livro reservado com sucesso.");
         }
     };
 

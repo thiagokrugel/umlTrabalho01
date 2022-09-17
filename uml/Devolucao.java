@@ -9,6 +9,7 @@ public class Devolucao extends Transacao {
         if (livro.estado == "emprestado") {
           livro.estado = "livre";
           dataDevolucao = data;
+          System.out.println("Livro devolvido.");
         }
     };
 
