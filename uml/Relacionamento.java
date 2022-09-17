@@ -6,9 +6,9 @@ public class Relacionamento {
   static Estudante estudante = new Estudante();
 
   public Relacionamento(Estudante estudante, Atendente atendente, Pessoa pessoa){
-    this.pessoa = pessoa;
-    this.atendente = atendente;
-    this.estudante = estudante;
+    Relacionamento.pessoa = pessoa;
+    Relacionamento.atendente = atendente;
+    Relacionamento.estudante = estudante;
   }
 
   public static void incluir (String primeiroNome, String sobrenome, String cpf, int idPapel) {
@@ -16,11 +16,11 @@ public class Relacionamento {
     if (!resultado) {
       switch (idPapel) {
         case 0: estudante.incluirEstudante(primeiroNome, sobrenome, cpf); 
-                pessoa.incluirPessoa(primeiroNome, sobrenome, cpf);
-                break;
+          pessoa.incluirPessoa(primeiroNome, sobrenome, cpf);
+          break;
         case 1: atendente.incluirAtendente(primeiroNome, sobrenome, cpf);
-                pessoa.incluirPessoa(primeiroNome, sobrenome, cpf);
-                break;
+          pessoa.incluirPessoa(primeiroNome, sobrenome, cpf);
+          break;
         case 2: pessoa.incluirPessoa(primeiroNome, sobrenome, cpf); break;
         default: System.out.printf("Selecione uma opção válida."); break;
       }
@@ -35,11 +35,11 @@ public class Relacionamento {
     if (resultado) {
       switch (idPapel) {
         case 0: estudante.excluirEstudante(cpf); 
-                pessoa.excluirPessoa(cpf);
-                break;
+          pessoa.excluirPessoa(cpf);
+          break;
         case 1: atendente.excluirAtendente(cpf);
-                pessoa.excluirPessoa(cpf);
-                break;
+          pessoa.excluirPessoa(cpf);
+          break;
         case 2: pessoa.excluirPessoa(cpf); break;
         default: System.out.printf("Selecione uma opção válida.\n"); break;
       }
@@ -87,11 +87,11 @@ public class Relacionamento {
     if (resultado) {
       switch (idPapel){
         case 0: estudante.atualizarEstudante(cpf, novoNome, novoSobrenome); 
-                pessoa.atualizarPessoa(cpf, novoNome, novoSobrenome);
-                break;
+          pessoa.atualizarPessoa(cpf, novoNome, novoSobrenome);
+          break;
         case 1: atendente.atualizarAtendente(cpf, novoNome, novoSobrenome);
-                pessoa.atualizarPessoa(cpf, novoNome, novoSobrenome);
-                break;
+          pessoa.atualizarPessoa(cpf, novoNome, novoSobrenome);
+          break;
         case 2: pessoa.atualizarPessoa(cpf, novoNome, novoSobrenome); break;
         default: System.out.printf("Selecione uma opção válida.\n"); break;
       } 

@@ -9,11 +9,11 @@ public class Movimentacao {
   static int dias;
 
   public Movimentacao(Reserva reserva, Devolucao devolucao, Emprestimo emprestimo, Date data, int dias){
-    this.reserva = reserva;
-    this.devolucao = devolucao;
-    this.emprestimo = emprestimo;
-    this.data = data;
-    this.dias = dias;
+    Movimentacao.reserva = reserva;
+    Movimentacao.devolucao = devolucao;
+    Movimentacao.emprestimo = emprestimo;
+    Movimentacao.data = data;
+    Movimentacao.dias = dias;
   }
 
   public static void registraMovimentacao (Livro livro, int idOperacao){
