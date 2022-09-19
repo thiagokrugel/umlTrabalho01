@@ -40,7 +40,10 @@ public class Relacionamento {
         case 1: atendente.excluirAtendente(cpf);
           pessoa.excluirPessoa(cpf);
           break;
-        case 2: pessoa.excluirPessoa(cpf); break;
+        case 2: pessoa.excluirPessoa(cpf); 
+          estudante.excluirEstudante(cpf); 
+          atendente.excluirAtendente(cpf); 
+          break;
         default: System.out.printf("Selecione uma opção válida.\n"); break;
       }
     }
